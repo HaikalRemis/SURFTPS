@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SURFT - Private Server</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to bottom, #87ceeb 0%, #b0e0e6 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    .clouds {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .cloud {
+      position: absolute;
+      background: #fff;
+      border-radius: 50%;
+      opacity: 0.8;
+      filter: blur(1px);
+    }
+
+    .cloud:before,
+    .cloud:after {
+      content: '';
+      position: absolute;
+      background: #fff;
+      border-radius: 50%;
+    }
+
+    .cloud1 {
+      width: 120px;
+      height: 60px;
+      top: 20%;
+      left: -200px;
+      animation: moveCloud 35s linear infinite;
+    }
+    .cloud1:before {
+      width: 60px; height: 60px; top: -20px; left: 10px;
+    }
+    .cloud1:after {
+      width: 80px; height: 80px; top: -30px; right: 10px;
+    }
+
+    .cloud2 {
+      width: 160px;
+      height: 70px;
+      top: 40%;
+      left: -300px;
+      animation: moveCloud 50s linear infinite;
+      animation-delay: -15s;
+    }
+    .cloud2:before {
+      width: 70px; height: 70px; top: -25px; left: 20px;
+    }
+    .cloud2:after {
+      width: 90px; height: 90px; top: -35px; right: 20px;
+    }
+
+    .cloud3 {
+      width: 100px;
+      height: 50px;
+      top: 60%;
+      left: -150px;
+      animation: moveCloud 40s linear infinite;
+      animation-delay: -8s;
+    }
+    .cloud3:before {
+      width: 50px; height: 50px; top: -15px; left: 5px;
+    }
+    .cloud3:after {
+      width: 60px; height: 60px; top: -20px; right: 5px;
+    }
+
+    @keyframes moveCloud {
+      0% { transform: translateX(-250px); }
+      100% { transform: translateX(120vw); }
+    }
+
+    .container {
+      width: 90%;
+      max-width: 800px;
+      text-align: center;
+      padding: 2rem;
+      background: rgba(22, 26, 45, 0.7);
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(5px);
+      position: relative;
+      z-index: 1;
+      margin-top: 100px;
+    }
+
+    .logo-image {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 3px solid #45a29e;
+      box-shadow: 0 0 25px rgba(69, 162, 158, 0.7);
+      margin-bottom: 1.5rem;
+    }
+
+    .logo-text {
+      font-size: 3rem;
+      font-weight: bold;
+      background: linear-gradient(45deg, #45a29e, #66fcf1);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: 0 0 10px rgba(102, 252, 241, 0.3);
+    }
+
+    .logo-subtext {
+      font-size: 1.2rem;
+      color: #c5c6c7;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.2rem 2rem;
+      background: rgba(0, 0, 0, 0.6);
+      color: #c5c6c7;
+      border-radius: 12px;
+      text-decoration: none;
+      font-size: 1.2rem;
+      border: 1px solid rgba(69, 162, 158, 0.3);
+      transition: 0.3s;
+    }
+    .btn:hover {
+      color: #66fcf1;
+      background: rgba(0,0,0,0.8);
+    }
+    .btn i { margin-right: 10px; }
+
+    .footer {
+      margin-top: 2rem;
+      color: #fff;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="clouds">
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+    <div class="cloud cloud3"></div>
+  </div>
+
+  <div class="container">
+    <div class="logo">
+      <img src="https://i.ibb.co.com/N26zPk4h/Wc.jpg" alt="SURFT Logo" class="logo-image">
+      <div class="logo-text">SURFT</div>
+      <div class="logo-subtext">Private Server</div>
+    </div>
+
+    <div class="buttons">
+      <a href="#" class="btn"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      <a href="#" class="btn"><i class="fab fa-discord"></i> Discord</a>
+      <a href="#" class="btn"><i class="fas fa-globe"></i> Host</a>
+    </div>
+  </div>
+
+</body>
+</html>
